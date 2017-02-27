@@ -40,7 +40,7 @@
 		<installation>
 			<level>intermediate</level>
 			<time>2460</time>
-			<target-version>3.0.10</target-version>
+			<target-version>3.0.14</target-version>
 		</installation>
 		<history>
 			<entry>
@@ -1311,7 +1311,7 @@ if (STARGATE)
 			<edit>
 				<find><![CDATA[		if (!$this->theme)
 		{
-			trigger_error('Could not get style data', E_USER_ERROR);
+			trigger_error('NO_STYLE_DATA', E_USER_ERROR);
 		}]]></find>
 				<action type="replace-with"><![CDATA[		if (!$this->theme)
 		{
@@ -1553,7 +1553,7 @@ if (STARGATE)
 	'DATABASE_TABLE'	=> ' database table!</b>',
 	'DELETING_RSSCACHE'	=> '<b>Deleting rsscache_*.dat files in cache directory:</b>',
 	'FAILED_UPDATE'		=> '<br /><b>Failed to update ',
-	'LOG_RSS_CACHE_CLEANED'	=> '<strong>Deleted cached versions of all rsscache_*.dat files</strong><br />» %s',
+	'LOG_RSS_CACHE_CLEANED'	=> '<strong>Deleted cached versions of all rsscache_*.dat files</strong><br />Â» %s',
 	'NO_INFO_FOUND'		=> '<br /><b>No info found in ',
 	'PURGING_CACHE'		=> '<b>Purging cache:</b>',
 	'REFRESHED'		=> ' - <b>refreshed</b>',
@@ -1582,12 +1582,12 @@ if (STARGATE)
 
 	//youtube webpage
 	'NO_COMMENTS'			=> 'No comments to display.',
-	'POSTERS_COMMENT'		=> '%1$s’s comments: %2$s.',
+	'POSTERS_COMMENT'		=> '%1$sâ€™s comments: %2$s.',
 	'VIDEO_POSTER'			=> 'Posted by',
 	'YOUTUBE'				=> 'Youtube',
 	'SWPYVL'				=> 'Stargate Web Pages: youtube video links',
 	'SGP_SUPPORTING'		=> 'Stargate Portal &bull; Supporting Communities Worldwide',
-	'SGP_IN_DEVELOPMENT'	=> 'Stargate-Portal’s youtube web-pages (in development)',
+	'SGP_IN_DEVELOPMENT'	=> 'Stargate-Portalâ€™s youtube web-pages (in development)',
 	'TITLE'					=> 'Title',
 	'PERFORMED_BY'			=> 'Performed by',
 	'RATING'				=> 'Rating',
@@ -1616,8 +1616,8 @@ if (STARGATE)
 	'ERROR_PORTAL_CONFIG'			=> 'Error! Could not retrieve portal config data',
 	'ERROR_PORTAL_FORUMS'			=> 'Error! Could not query forums information',
 	'ERROR_PORTAL_HTTP'				=> 'Error! Could not retrieve HTTP Referrals data',
-	'ERROR_PORTAL_HTTP_DELETE'		=> 'Error! Couldn’t delete HTTP Referrals',
-	'ERROR_PORTAL_HTTP_QUERY'		=> 'Error! Couldn’t query HTTP Referrals',
+	'ERROR_PORTAL_HTTP_DELETE'		=> 'Error! Couldnâ€™t delete HTTP Referrals',
+	'ERROR_PORTAL_HTTP_QUERY'		=> 'Error! Couldnâ€™t query HTTP Referrals',
 	'ERROR_FORUM_INFO'				=> 'Error! Could not query forum info',
 	'ERROR_PORTAL_MENUS'			=> 'Error! Could not query portal menus information ',
 	'ERROR_PORTAL_MODULE'			=> 'Error! Could not query portal modules information: ',
@@ -1682,15 +1682,15 @@ if (STARGATE)
 		</open>
 		<open src="language/en/mcp.php">
 			<edit>
-				<find><![CDATA[	'MCP_MAKE_NORMALS_CONFIRM'		=> 'Are you sure you want to change the selected topics to “Standard Topics”?',]]></find>
-				<action type="after-add"><![CDATA[	'MCP_MAKE_NEWS'					=> 'Modify to “News”',
-	'MCP_MAKE_NEWS_CONFIRM'			=> 'Are you sure you want to change this topic to a News Item”?',
-	'MCP_MAKE_NEWSS'				=> 'Modify to “News Items”',
-	'MCP_MAKE_NEWSS_CONFIRM'		=> 'Are you sure you want to change these topics to a News Items”?',
-	'MCP_MAKE_NEWS_GLOBAL'			=> 'Modify to “Global News”',
-	'MCP_MAKE_NEWS_GLOBAL_CONFIRM'	=> 'Are you sure you want to change this topic to a Global News Item”?',
-	'MCP_MAKE_NEWSS_GLOBAL'			=> 'Modify to “Global News Items”',
-	'MCP_MAKE_NEWSS_GLOBAL_CONFIRM'	=> 'Are you sure you want to change these topics to a Global News Items”?',]]></action>
+				<find><![CDATA[	'MCP_MAKE_NORMALS_CONFIRM'		=> 'Are you sure you want to change the selected topics to â€œStandard Topicsâ€?',]]></find>
+				<action type="after-add"><![CDATA[	'MCP_MAKE_NEWS'					=> 'Modify to â€œNewsâ€',
+	'MCP_MAKE_NEWS_CONFIRM'			=> 'Are you sure you want to change this topic to a News Itemâ€?',
+	'MCP_MAKE_NEWSS'				=> 'Modify to â€œNews Itemsâ€',
+	'MCP_MAKE_NEWSS_CONFIRM'		=> 'Are you sure you want to change these topics to a News Itemsâ€?',
+	'MCP_MAKE_NEWS_GLOBAL'			=> 'Modify to â€œGlobal Newsâ€',
+	'MCP_MAKE_NEWS_GLOBAL_CONFIRM'	=> 'Are you sure you want to change this topic to a Global News Itemâ€?',
+	'MCP_MAKE_NEWSS_GLOBAL'			=> 'Modify to â€œGlobal News Itemsâ€',
+	'MCP_MAKE_NEWSS_GLOBAL_CONFIRM'	=> 'Are you sure you want to change these topics to a Global News Itemsâ€?',]]></action>
 			</edit>
 		</open>
 		<open src="language/en/ucp.php">
@@ -1736,18 +1736,18 @@ if (STARGATE)
 		<open src="language/en/viewtopic.php">
 			<edit>
 				<comment lang="en"><![CDATA[Make sure your editor saves all language files with encoding set to UTF-8 and file format Unix for all language file...]]></comment>
-				<find><![CDATA[	'MAKE_STICKY'				=> 'Change to “Sticky”',]]></find>
-				<action type="after-add"><![CDATA[	'MAKE_NEWS'					=> 'Change to “News”',
-	'MAKE_NEWS_GLOBAL'			=> 'Change to “Global News”',]]></action>
+				<find><![CDATA[	'MAKE_STICKY'				=> 'Change to â€œStickyâ€',]]></find>
+				<action type="after-add"><![CDATA[	'MAKE_NEWS'					=> 'Change to â€œNewsâ€',
+	'MAKE_NEWS_GLOBAL'			=> 'Change to â€œGlobal Newsâ€',]]></action>
 			</edit>
 		</open>
 		<open src="language/en/acp/common.php">
 			<edit>
 				<find><![CDATA[	'NO_PASSWORD_SUPPLIED'	=> 'You need to enter your password to access the Administration Control Panel.',]]></find>
-				<action type="before-add"><![CDATA[	'NO_EDIT'				=> 'Can’t Edit',
-	'NO_DELETE'				=> 'Can’t Delete',
-	'NO_MOVE_DOWN'			=> 'Can’t move down',
-	'NO_MOVE_UP'			=> 'Can’t move up',
+				<action type="before-add"><![CDATA[	'NO_EDIT'				=> 'Canâ€™t Edit',
+	'NO_DELETE'				=> 'Canâ€™t Delete',
+	'NO_MOVE_DOWN'			=> 'Canâ€™t move down',
+	'NO_MOVE_UP'			=> 'Canâ€™t move up',
 	'NO_RESYNC'				=> 'Resynchronise Disabled',]]></action>
 			</edit>
 			<edit>
@@ -2103,13 +2103,11 @@ img_news_unread_locked_mine	= news_unread_locked_mine.gif*27*27]]></action>
 ]]></action>
 			</edit>
 			<edit>
-				<find><![CDATA[			<li class="icon-home"><a href="{U_INDEX}" accesskey="h">{L_INDEX}</a></li>
-]]></find>
-				<action type="replace-with"><![CDATA[			<li class="icon-home"><!-- IF STARGATE --><a href="{U_PORTAL}">{L_PORTAL}</a> &bull; <!-- ENDIF --><a href="{U_INDEX}" accesskey="h">{L_INDEX}</a></li>
-]]></action>
+				<find><![CDATA[			<li class="icon-home"><a ]]></find>
+				<action type="replace-with"><![CDATA[			<li class="icon-home"><!-- IF STARGATE --><a href="{U_PORTAL}">{L_PORTAL}</a> &bull; <!-- ENDIF --><a ]]></action>
 			</edit>
 			<edit>
-				<find><![CDATA[<div class="copyright">Powered by <a href="http://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group]]></find>
+				<find><![CDATA[	<div class="copyright">{CREDIT_LINE}]]></find>
 				<action type="after-add"><![CDATA[		<!-- IF STARGATE --><!-- INCLUDE portal_footer_pre.html --><!-- ENDIF -->
 		<!-- IF STARGATE --><!-- INCLUDE portal_footer.html --><!-- ENDIF -->]]></action>
 			</edit>
